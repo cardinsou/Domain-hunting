@@ -1,1 +1,1 @@
-# domain-hunting
+# Domain hunting

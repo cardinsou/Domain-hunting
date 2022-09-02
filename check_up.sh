@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path="/home/<user>/domain-hunting"
+path="/home/<user>/Domain-hunting"
 
 #check if download folder is present
 

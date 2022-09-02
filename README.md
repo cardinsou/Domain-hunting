@@ -35,7 +35,7 @@ git clone https://github.com/cardinsou/Domain-hunting.git
 ```
 #!/bin/bash
 
-path="/home/<user>/Domain-hunting-main"
+path="/home/<user>/Domain-hunting"
 
 if [ ! -d "$path/downloaded_domains" ]
 	then

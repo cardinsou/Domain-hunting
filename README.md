@@ -70,8 +70,6 @@ regex_list = [	"regex_1",
 0 6 * * * /home/<user>/Domain-hunting-main/check_up.sh
 ```
 
-We schedule a check at 6:00 AM and domain extraction at 10:00 AM
-
 - Wait for results
 	
 	Every day at 10:00 AM domain hunting script runs and saves matching domains in "today_domains.txt" file. After script running, in the same folder you can find also a sqlite DB and a log file. Sqlite DB contains domains previously matched, so you will be able to keep track of historical match.

@@ -60,12 +60,6 @@ regex_list = [	"regex_1",
 .........
 ```
 
-- Start collection 
-  
-```
-/home/<user>/Domain-hunting-main/check_up.sh
-```
-
 - Add to crontab the following entry
 
 ```

@@ -20,7 +20,7 @@ output_file_path = os.path.dirname(os.path.realpath(__file__)) + "/today_domains
 
 today_domains = []
 regex_list = [	"regex_1",
-				"regex_2"]
+		"regex_2"]
 
 
 #Feed 1

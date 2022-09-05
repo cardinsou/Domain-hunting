@@ -20,7 +20,7 @@ output_file_path = os.path.dirname(os.path.realpath(__file__)) + "/today_domains
 
 today_domains = []
 regex_list = [	"regex_1",
-		"regex_2"]
+				"regex_2"]
 
 
 #Feed 1
@@ -61,12 +61,12 @@ def get_feed_2():
 		log_message("Download domain list from: " + url)
 	try:
 		r = requests.get(url)
-		z = zipfile.ZipFile(io.BytesIO(r.content)).extractall()
-		with open(os.path.dirname(os.path.realpath(__file__)) + "/domain-names.txt","r") as file_in:
+		z = zipfile.ZipFile(io.BytesIO(r.content)).extractall(path=os.path.dirname(os.path.realpath(__file__)) + "/downloaded_domains/")
+		shutil.move(os.path.dirname(os.path.realpath(__file__)) + "/downloaded_domains/domain-names.txt", os.path.dirname(os.path.realpath(__file__)) + "/downloaded_domains/domain-names.txt." + yesterday)
+		with open(os.path.dirname(os.path.realpath(__file__)) + "/downloaded_domains/domain-names.txt." + yesterday,"r") as file_in:
 			for domain in file_in.readlines():
 				clean_domain = domain.strip()
-				match_domain(clean_domain)
-		shutil.move(os.path.dirname(os.path.realpath(__file__)) + "/domain-names.txt", os.path.dirname(os.path.realpath(__file__)) + "/downloaded_domains/domain-names.txt." + yesterday)
+				match_domain(clean_domain)		
 		log_message("Feed 2 END OK")
 	except KeyboardInterrupt:
 		log_message("Feed 2 END FAIL - User interrupt")
